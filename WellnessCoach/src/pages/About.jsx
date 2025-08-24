@@ -1,30 +1,38 @@
+import React, { useState } from "react";
 import about1 from "../assets/about/about1.jpg"
 import about2 from "../assets/about/about2.jpg"
 import about3 from "../assets/about/about3.jpg"
 
 const textColor = "text-white";
-export function About() {
+const textColor1 = "#343f1e";
+const backgroundColor = "#e3e9d8";
+const hoverColor = "#70a309";
+
+function About() {
+
   return (
     <>
       <div className={` ${textColor} relative `}>
-        <img src={about1} alt="About Us" className="w-screen" />
-        <div className={`absolute bottom-12 sm:bottom-32  sm:mx-auto`}>
-          <div className="text-sm sm:text-xl md:text-3xl lg:text-5xl text-center sm:[text-left, px-4] "><p className="sm:w-32">About Us</p></div>
-          <h1 className="  text-lg md:text-4xl lg:text-6xl text-center sm:text-left">We are dedicated to helping you achieve your wellness goals.</h1>
+        <div className={`bg-image bg-cover bg-no-repeat  bg-center min-h-[319px] sm:min-h-[293px] md:min-h-[550px] lg:min-h-[650px]`} style={{ backgroundImage: `url(${about1})` }} />
+        <div className={`absolute bottom-[80px]  md:bottom-[230px]  px-6 sm:px-12  lg:px-24 lg:max-w-[600px]`} >
+          <div className="text-2xl md:text-3xl lg:text-4xl text-center sm:[text-left, px-4] md:py-4 lg:py-8  "><p className="sm:w-32">About Us</p></div>
+          <h1 className="  text-4xl md:text-5xl lg:text-7xl text-center sm:text-left sm:w-full  ">Your health is my passion.</h1>
         </div>
       </div>
-      <SecondComponent />
+      <div style={{textColor: textColor1}} >
+        <SecondComponent  />
       <ThirdComponent imageSrc={about2} alt={'About 2'} />
       <FourthComponent />
       <FifthComponent imageSrc={about3} alt={'About 3'} />
 
+      </div>
     </>
   );
 }
 
 function SecondComponent() {
   return (
-    <div className="md:flex bg-green-100 p-4 sm:py-48 justify-content-center ">
+    <div className="md:flex   p-4 sm:py-36 justify-center " style={{backgroundColor:backgroundColor, color: textColor1}}>
       <Heading />
       <Content />
     </div>
@@ -33,17 +41,17 @@ function SecondComponent() {
 
 function Heading() {
   return (
-    <div className="min-w-96 p-2 sm:p-4">
-      <h2 className="text-4xl sm:4xl text-center p-2 ">Taking an individualized, root cause approach to health.</h2>
+    <div className="lg:min-w-[580px] p-2 sm:p-4">
+      <h2 className="text-4xl sm:4xl md:text-5xl lg:text-6xl text-center p-2 ">Taking an individualized, root cause approach to health.</h2>
 
     </div>
   )
 
 }
 
-function Image({imageSrc, alt}) {
+function Image({ imageSrc, alt }) {
   return (
-    <div className="p-5"><img src={imageSrc} alt={alt} className="w-full max-w-full rounded-xl" /></div>
+    <div className="p-5 md:min-w-[500px] lg:min-w-[620px]"><img src={imageSrc} alt={alt} className="w-full max-w-full rounded-xl" /></div>
   )
 }
 
@@ -55,13 +63,13 @@ function Content() {
     </div>)
 }
 
-function ThirdComponent({imageSrc, alt}) {
+function ThirdComponent({ imageSrc, alt }) {
   return (
-    <div className="sm:flex px-3 py-8">
-      <Image imageSrc={imageSrc} alt={alt} />
-      <div className="flex flex-col justify-center">
-        <h2 className="text-2xl">Supporting you in achieving and maintainig a healthy, balanced life.</h2>
-        <p>I believe that one size does NOT fit all. I take a holistic approach to nutrition using evidenced-based intergrative and functional medicine. This means helping you feel your best by targeting the root cause of your concerns and supportin you in building maintainable nutrition and lifestyle habits for long-term. </p>
+    <div className="md:flex px-3 py-8" style={{color: textColor1}}>
+      <Image imageSrc={imageSrc} alt={alt}  />
+      <div className="md:flex md:flex-col md:py-18 lg:py-32 md:px-6 lg:px-12">
+        <h2 className="text-2xl md:text-4xl lg:text-5xl">Supporting you in achieving and maintaining a healthy, balanced life.</h2>
+        <p className="md:py-8 lg:py-12">I believe that one size does NOT fit all. I take a holistic approach to nutrition using evidenced-based integrative and functional medicine. This means helping you feel your best by targeting the root cause of your concerns and supporting you in building maintainable nutrition and lifestyle habits for long-term.</p>
       </div>
     </div>
   )
@@ -74,11 +82,11 @@ const features = [
 ]
 function FourthComponent() {
   return (
-    <div className="sm:flex px-3 sm:px-8 py-8 sm:py-16 md:py-32 flex-nowrap bg-green-200">
+    <div className="md:flex px-3 gap-4 sm:px-8 py-8 sm:py-16 md:py-32 flex-nowrap " style={{ backgroundColor: backgroundColor, color: textColor1 }}>
       {features.map(element => (
-        <div  className="flex flex-col justify-evenly">
+        <div key={element.title} className="flex flex-col  justify-center items-center py-8">
           <h3 className="text-3xl text-emerald-600">{element.number}%</h3>
-          <h4 className="text-2xl font-bold">{element.title}</h4>
+          <h4 className="text-2xl font-bold py-4">{element.title}</h4>
           <p className="text-lg">{element.text}</p>
         </div>
       ))}
@@ -88,18 +96,21 @@ function FourthComponent() {
 
 }
 
-function FifthComponent ({imageSrc , alt}){
-  return(
-    <div className="sm:flex py-8">
+function FifthComponent({ imageSrc, alt }) {
+const [hover, setHover] = useState(false);
+
+  return (
+    <div className="md:flex py-8 " style={{color: textColor1}}>
       <Image imageSrc={imageSrc} alt={alt} />
-      <div className="flex flex-col justify-between min-h-64 px-5">
-        <h4 className="font-semibold">Why work with me</h4>
+      <div className="flex flex-col  min-h-64 px-5 gap-6 py-16 md:py-36 lg:py-52 ">
+        <h4 className=" text-2xl md:text-3xl lg:text-4xl">Why work with me</h4>
         <p>Choosing me as your health coach means choosing a partner who is dedicated to your success. I stay current with the latest research and trends in nutrition to provide you with evidence-based advice. My approach is compassionate, non-judgmental, and focused on helping you find what works best for you.</p>
-        <button className=" border-2 border-green-800 rounded-full hover:bg-green-600 px-5 py-3 max-w-48 text-center">Book a Appointment</button>
+        <button className={` border-2 border-green-800 rounded-full md:px-4 px-2 lg:px-5 py-3 max-w-48 text-center `} onMouseEnter={() => {setHover(true)} } onMouseLeave={() => {setHover(false)}} style={{backgroundColor: hover ? hoverColor : "bg-white"}}>Book a Appointment</button>
       </div>
     </div>
   )
 
 
 }
- 
+
+export { About, Image, backgroundColor, textColor1 };
