@@ -10,12 +10,11 @@ import service4 from '../assets/services/service4.jpg';
 import service5 from '../assets/services/service5.jpg';
 import { textColor1 } from './About';
 import { useContext } from 'react';
-import { AppContext } from '../context/color.context'
+import { ColorContext } from '../context/color.context'
 
 
 export function Services() {
-    const rootColors = useContext(AppContext);
-
+    const rootColors = useContext(ColorContext);
     const bgColor1 = rootColors['--ast-global-color-0'];
     const bgColor2 = rootColors["--ast-global-color-1"];
     const textColor3 = rootColors["--ast-global-color-2"];

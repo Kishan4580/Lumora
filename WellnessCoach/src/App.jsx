@@ -4,15 +4,15 @@ import {BrowserRouter, Route, Routes, } from 'react-router-dom';
 import { Services } from './pages/Services';
 import { Contact } from './pages/Contact';
 import Footer from './components/Footer';
-import {Header} from './components/Header';
-import { AppContext } from './context/color.context';
+import {Layout} from './components/Layout';
+import { ColorContext } from './context/color.context';
 
 
 function App() {
 
   return (
     <BrowserRouter>
-      <AppContext.Provider value={{
+      <ColorContext.Provider value={{
     "--ast-global-color-0": "#5c8607",
     "--ast-global-color-1": "#70a309",
     "--ast-global-color-2": "#343f1e",
@@ -23,17 +23,17 @@ function App() {
     "--ast-global-color-7": "#343f1e",
     "--ast-global-color-8": "#050505"
   }}>
-    <Header />
+    {/* <Header /> */}
      <Routes>
-       <Route path="/about" element={<About />} />
-       <Route path="/services" element={<Services />} />
-       <Route path="/contact" element={<Contact />} />
-       <Route path="/" element={<Home />} />
+       <Route path="/about" element={<Layout ><About /> </Layout>} />
+       <Route path="/services" element={<Layout ><Services /> </Layout>} />
+       <Route path="/contact" element={<Layout ><Contact /> </Layout>} />
+       <Route path="/" element={<Layout ><Home /> </Layout>} />
       </Routes>
-      <div className='h-20  '>
+      {/* <div className='h-20  '>
         <Footer />
-      </div>
-      </AppContext.Provider>
+      </div> */}
+      </ColorContext.Provider>
     </BrowserRouter>
   )
 }

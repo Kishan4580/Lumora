@@ -1,9 +1,9 @@
-import { AppContext } from '../context/color.context'
+import { ColorContext } from '../context/color.context'
 
 import contact from '../assets/contact/contact.jpg'
 import { useContext } from 'react'
 export function Contact() {
-    const rootColors = useContext(AppContext)
+    const rootColors = useContext(ColorContext)
     const formColor = rootColors["--ast-global-color-4"]
     const btnBgColor = rootColors["--ast-global-color-0"]
     const textColor = rootColors["--ast-global-color-2"]

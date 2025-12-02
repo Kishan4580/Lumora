@@ -35,7 +35,7 @@ export default function Calendar() {
   };
 
   return (
-    <div className="w-80 p-4 bg-white-500 shadow-lg rounded-xl">
+    <div className="w-80 p-4 bg-white shadow-lg rounded-xl">
       <h2 className="text-lg font-semibold mb-2 bg-">Date & Time Selection</h2>
 
       {/* Header */}

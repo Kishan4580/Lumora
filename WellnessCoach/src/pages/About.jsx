@@ -51,7 +51,7 @@ function Heading() {
 
 function Image({ imageSrc, alt }) {
   return (
-    <div className="p-5 md:min-w-[500px] lg:min-w-[620px]"><img src={imageSrc} alt={alt} className="w-full max-w-full rounded-xl" /></div>
+    <div className="py-4 md:min-w-[500px] lg:max-w-[620px]"><img src={imageSrc} alt={alt} className="w-full max-w-full rounded-xl" /></div>
   )
 }
 
@@ -105,7 +105,7 @@ const [hover, setHover] = useState(false);
       <div className="flex flex-col  min-h-64 px-5 gap-6 py-16 md:py-36 lg:py-52 ">
         <h4 className=" text-2xl md:text-3xl lg:text-4xl">Why work with me</h4>
         <p>Choosing me as your health coach means choosing a partner who is dedicated to your success. I stay current with the latest research and trends in nutrition to provide you with evidence-based advice. My approach is compassionate, non-judgmental, and focused on helping you find what works best for you.</p>
-        <button className={` border-2 border-green-800 rounded-full md:px-4 px-2 lg:px-5 py-3 max-w-48 text-center `} onMouseEnter={() => {setHover(true)} } onMouseLeave={() => {setHover(false)}} style={{backgroundColor: hover ? hoverColor : "bg-white"}}>Book a Appointment</button>
+        <button className={` border-2 border-green-800 rounded-full md:px-4 px-2 lg:px-5 py-3 max-w-48 text-center `} onMouseEnter={() => {setHover(true)} } onMouseLeave={() => {setHover(false)}} style={{backgroundColor: hover ? hoverColor : "bg-white", color : hover ? "bg-white": hoverColor}}>Book a Appointment</button>
       </div>
     </div>
   )
@@ -113,4 +113,4 @@ const [hover, setHover] = useState(false);
 
 }
 
-export { About, Image, backgroundColor, textColor1 };
+export { About, Image, backgroundColor, textColor1, ThirdComponent };

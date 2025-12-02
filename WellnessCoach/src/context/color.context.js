@@ -1,6 +1,6 @@
 import { createContext } from "react";
 
-export const AppContext = createContext({
+export const ColorContext = createContext({
     "--ast-global-color-0": "#5c8607",
     "--ast-global-color-1": "#70a309",
     "--ast-global-color-2": "#343f1e",

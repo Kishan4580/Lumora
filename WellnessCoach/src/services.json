@@ -1,0 +1,7 @@
+{
+    "plans" : [{"image-source":"service1.jpg",  "title" : "Personalized nutrition plans", "description" : "Create customized meal plans tailored to your individual health goals, needs lifestyle preferences to help you achieve optimal wellness.", "start-price": 500},
+     {"image-source": "service2.jpg", "title" : "Weight management counseling", "description" : "Through tailored nutrition plans, behavioral coaching, and fitness advice, we focus on sustainable results your overall well-being.", "start-price" : 1000},
+     {"image-source" : "service3.jpg", "title" : "Health and wellness coaching", "description" : "Offer one-on-one coaching sessions to help you adopt healthier eating patterns, improve your overall well-being manage chronic conditions.", "start-price" : 800},
+     {"image-source": "service4.jpg", "title" : "Expand your spiritual knowledge", "description": "Spiritual coaching will help you to walk confidently into your purpose and incorporate your spirituality into your day-to-day life.", "start-price" : 1500}
+]
+}
