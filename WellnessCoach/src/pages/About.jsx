@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import Button from "../components/Button";
 import about1 from "../assets/about/about1.jpg"
 import about2 from "../assets/about/about2.jpg"
 import about3 from "../assets/about/about3.jpg"
@@ -6,7 +7,7 @@ import about3 from "../assets/about/about3.jpg"
 const textColor = "text-white";
 const textColor1 = "#343f1e";
 const backgroundColor = "#e3e9d8";
-const hoverColor = "#70a309";
+
 
 function About() {
 
@@ -19,7 +20,7 @@ function About() {
           <h1 className="  text-4xl md:text-5xl lg:text-7xl text-center sm:text-left sm:w-full  ">Your health is my passion.</h1>
         </div>
       </div>
-      <div style={{textColor: textColor1}} >
+      <div style={{color: textColor1}} >
         <SecondComponent  />
       <ThirdComponent imageSrc={about2} alt={'About 2'} />
       <FourthComponent />
@@ -97,15 +98,14 @@ function FourthComponent() {
 }
 
 function FifthComponent({ imageSrc, alt }) {
-const [hover, setHover] = useState(false);
 
   return (
-    <div className="md:flex py-8 " style={{color: textColor1}}>
+    <div className="md:flex px-3 py-8 " style={{color: textColor1}}>
       <Image imageSrc={imageSrc} alt={alt} />
       <div className="flex flex-col  min-h-64 px-5 gap-6 py-16 md:py-36 lg:py-52 ">
         <h4 className=" text-2xl md:text-3xl lg:text-4xl">Why work with me</h4>
         <p>Choosing me as your health coach means choosing a partner who is dedicated to your success. I stay current with the latest research and trends in nutrition to provide you with evidence-based advice. My approach is compassionate, non-judgmental, and focused on helping you find what works best for you.</p>
-        <button className={` border-2 border-green-800 rounded-full md:px-4 px-2 lg:px-5 py-3 max-w-48 text-center `} onMouseEnter={() => {setHover(true)} } onMouseLeave={() => {setHover(false)}} style={{backgroundColor: hover ? hoverColor : "bg-white", color : hover ? "bg-white": hoverColor}}>Book a Appointment</button>
+        <Button>Book a Appointment</Button>
       </div>
     </div>
   )

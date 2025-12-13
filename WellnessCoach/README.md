@@ -1,12 +1,55 @@
-# React + Vite
+# 🌿 Lumora – Wellness Coaching Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Lumora is a responsive web application designed to help individuals achieve balance and well‑being through personalized coaching.  
+Built with **React.js** and **Tailwind CSS**, the platform focuses on user‑centered design and sustainable lifestyle guidance.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
+👉 [View Live Website](https://your-live-link-here.com)  
+*(Replace with your deployed link once available)*
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+- Responsive **React.js frontend** with reusable components  
+- Modern styling using **Tailwind CSS**  
+- Wellness coaching sections highlighting lifestyle balance and health goals  
+- Clean, user‑friendly interface inspired by professional UI demos  
+- Collaborative development with **Git/GitHub workflows** (branching, merging, conflict resolution)
+
+---
+
+## 🛠️ Tech Stack
+- **Frontend:** React.js, Tailwind CSS  
+- **Version Control:** Git, GitHub  
+- **Deployment:** *(Add Netlify/Vercel/Other if you deploy)*  
+
+---
+
+## 👥 Team Contribution
+- Developed in a **two‑member team**  
+- **80% of code authored by me**, including component architecture, styling, and integration  
+- Partner contributed to remaining features and refinements  
+
+---
+
+## 📂 Getting Started
+
+### Prerequisites
+- Node.js (v16+ recommended)  
+- npm or yarn  
+
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/your-username/lumora.git
+
+# Navigate to project folder
+cd wellnesscoach
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev

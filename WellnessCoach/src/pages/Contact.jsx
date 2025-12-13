@@ -2,6 +2,7 @@ import { ColorContext } from '../context/color.context'
 
 import contact from '../assets/contact/contact.jpg'
 import { useContext } from 'react'
+import Button from '../components/Button'
 export function Contact() {
     const rootColors = useContext(ColorContext)
     const formColor = rootColors["--ast-global-color-4"]
@@ -37,7 +38,7 @@ export function Contact() {
                         <label htmlFor="message" >Message</label>
                         <textarea name="message" placeholder='Leave us a Message' className=' outline hover:outline-gray-800 my-2 sm:my-3 md:my-4 lg:my-5 border border-lime-700 rounded-md p-2 sm:p-3 md:p-4 lg:p-5 w-full h-auto min-h-[180px]' id="message"  ></textarea>
                     </div>
-                    <button className="rounded-lg p-2  sm:p-4 md:p-6" style={{backgroundColor : btnBgColor ? btnBgColor :  "bg-green-700"}}>Book a Appointment</button>
+                    <Button  >Book a Appointment</Button>
                 </form>
             </div>
         </div>

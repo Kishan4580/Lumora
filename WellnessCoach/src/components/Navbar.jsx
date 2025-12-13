@@ -1,9 +1,14 @@
 import  { useEffect, useState } from 'react'
+import {useLocation} from "react-router-dom"
 // import { flushSync } from 'react-dom';
 import { MdMenu, MdClose } from "react-icons/md";
 
 import headerlogo from "../assets/header-logo.svg"
 const Navbar = () => {
+
+  const pathname = useLocation().pathname;  
+  console.log(pathname);
+  
   const [isOpen, setIsOpen] = useState(false);
   const [viewW, setViewW] = useState()
   const handleClick = () => {
@@ -27,12 +32,12 @@ window.addEventListener('resize', (e) => {
 
       {/* Desktop */}
       <ul className='Nav-Menu gap-10 items-center justify-center hidden md:flex'>
-        <li className='text-[16px] font-[400] leading-4 hover:text-[#70A309]'><a href="/" >HOME</a></li>
-        <li className='text-[16px] font-[400] leading-4 hover:text-[#70A309]'> <a href="/about" > ABOUT</a></li>
-        <li className='text-[16px] font-[400] leading-4 hover:text-[#70A309]'><a href="/services">SERVICES</a></li>
-        <li className='text-[16px] font-[400] leading-4 hover:text-[#70A309]'><a href="/contact">CONTACT</a></li>
+        <li className="text-[16px] font-[400] leading-4 hover:text-[#70A309] " style={{ color: pathname === '/' ? '#70A309' : '' }}><a href="/"  >HOME</a></li>
+        <li className="text-[16px] font-[400] leading-4 hover:text-[#70A309] " style={{ color: pathname === '/about' ? '#70A309' : '' }}><a href="/about" > ABOUT</a></li>
+        <li className="text-[16px] font-[400] leading-4 hover:text-[#70A309] " style={{ color: pathname === '/services' ? '#70A309' : '' }}><a href="/services">SERVICES</a></li>
+        <li className="text-[16px] font-[400] leading-4 hover:text-[#70A309] " style={{ color: pathname === '/contact' ? '#70A309' : '' }}><a href="/contact">CONTACT</a></li>
         <li className='text-[16px] font-[400] leading-4 lg:mr-[50px]'> 
-          <button className='border-[1px] border- p-2.5 px-[40px] rounded-3xl hover:bg-[#70A309] hover:text-white'>
+          <button className='border-[1px] border-[#70A309] text-[#70A309] border- p-2.5 px-[40px] rounded-3xl hover:bg-[#70A309] hover:text-white'>
             Call:(202)555-0124
           </button>
         </li>

@@ -37,3 +37,9 @@ h1, h2, h3, h4, h5, h6 {
 button{
     color: var(--ast-global-color-3);
 }
+
+@media(min-width: 968px) {
+    .mdd\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}

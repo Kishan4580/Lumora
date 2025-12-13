@@ -89,8 +89,8 @@ export default function Calendar() {
               onClick={() => setSelectedDate(dateObj)}
               className={`p-2 rounded-lg text-sm ${
                 isSelected
-                  ? "bg-yellow-200 font-bold"
-                  : "hover:bg-gray-100"
+                  ? "bg-yellow-200 font-bold text-black"
+                  : "hover:bg-gray-100 text-[#70A309]"
               }`}
             >
               {day}

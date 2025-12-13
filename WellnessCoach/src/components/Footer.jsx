@@ -71,7 +71,7 @@ function Logo() {
 function Link({ children, href }) {
   return (
    
-      <a href={href} className="">
+      <a href={href} className="hover:text-[#70A309]">
         {children}
       </a>
    

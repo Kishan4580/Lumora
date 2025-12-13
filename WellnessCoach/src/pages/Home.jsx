@@ -32,8 +32,8 @@ export const Home = function () {
           style={{ backgroundImage: `url(${herosectionimage})` }}
         >
           <div className="ps-4">
-            <h1 className=" text-[16px] sm:text-[24px] text-white font-[350] mb-8 pl-7 ">Calorie control, balanced nutrition</h1>
-            <p className="text-3xl sm:text-5xl md:text-6xl text-amber-50 lg-font-[400] md:leading-20 mb-6 lg:mb-10 lg:ml-6 lg:leading-16 ">Start living your healthiest life</p>
+            <h1 className=" text-[16px] sm:text-[24px] text-white font-[350] mb-8 ">Calorie control, balanced nutrition</h1>
+            <p className="text-3xl sm:text-5xl md:text-6xl text-amber-50 lg-font-[400] md:leading-20 mb-6 lg:mb-10  lg:leading-16 ">Start living your healthiest life</p>
             <Button>Book an Appointment</Button>
           </div>
 
@@ -57,7 +57,7 @@ export const Home = function () {
         <div className="bg-[#E3E9D8] py-20 md:py-25 ">
           <h1 className="flex items-center justify-center  text-xl lg:text-2xl">Coaching Services</h1>
           <h2 className="flex items-center justify-center p-5 md:p-7 text-3xl lg:text-5xl font-[400] leading-[25px]">Create the life you want to live</h2>
-          <div className="grid md:grid-cols-2 gap-8 md:gap-x-8 lg:gap-x-12 md:gap-y-8 lg:gap-y-12 px-8 md:px-12 lg:px-36 xl:px-30" >{services.plans.map((item, i)=> <Services key={i} imgSrc={imageMap[services.plans[i]["image-source"]]} startPrice={item["start-price"]}  title={item.title} description={item.description}/>)}</div>
+          <div className="grid justify-center mdd:grid-cols-2 gap-8 md:gap-x-8 lg:gap-x-12 md:gap-y-8 lg:gap-y-12 px-8 md:px-12 lg:px-36 xl:px-30" >{services.plans.map((item, i)=> <Services key={i} imgSrc={imageMap[services.plans[i]["image-source"]]} startPrice={item["start-price"]}  title={item.title} description={item.description}/>)}</div>
         </div>
 
         {/* header end */}
@@ -74,7 +74,7 @@ const Services = ({ imgSrc, title, description, startPrice }) => {
   // console.log(bgColor);
   
   return (
-    <div className="rounded-xl flex flex-col  max-h-[685px]  ">
+    <div className="rounded-xl flex flex-col  max-h-[785px] max-w-[600px] shadow-lg overflow-hidden ">
       <img src={imgSrc} alt="service image" className=" h-3/5 rounded-t-xl   " />
       <div className={`flex flex-col gap-8 h-2/5 p-2  text-[${color}] bg-[${bgColor}] `} style={{backgroundColor : bgColor, color : color}}>
         <h3 className="font-semibold text-2xl" >{title}</h3>
