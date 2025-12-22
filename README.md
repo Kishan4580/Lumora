@@ -6,8 +6,7 @@ Built with **React.js** and **Tailwind CSS**, the platform focuses on user‑cen
 ---
 
 ## 🚀 Live Demo
-👉 [View Live Website](https://your-live-link-here.com)  
-*(Replace with your deployed link once available)*
+👉 [View Live Website](https://lumora-wellness-coaching-platform.onrender.com/)
 
 ---
 
@@ -53,3 +52,4 @@ npm install
 
 # Start development server
 npm run dev
+
